@@ -35,3 +35,12 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "Vedant"
+let anotherName = myName // anotherName gets copy of myName and changes in anotherName are not reflected in myName
+//but if same is done with objects reference is given instead of copy so changes are reflected in both
