@@ -1,0 +1,10 @@
+There are different execution context of javascript
+
+Global Execution context
+Function execution context
+Eval execution context
+
+it is executed in two phases/cycles
+
+memory creation phases
+execution phase
