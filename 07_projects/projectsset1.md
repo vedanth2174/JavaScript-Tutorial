@@ -29,9 +29,22 @@ buttons.forEach((button) => {
 
 
 ```
-##project 1
+##project 2
 ```javascript
+const form = document.querySelector('form');
+// const height = parseInt(document.querySelector('#height').value);
+// this will give you empty value of height
 
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const height_in_m = height / 100;
+  const height_squared = height_in_m * height_in_m;
+  const BMI = weight / height_squared;
+  document.querySelector('#results').innerHTML = BMI;
+});
 
 ```
 
