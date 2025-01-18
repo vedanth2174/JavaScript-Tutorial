@@ -47,4 +47,11 @@ form.addEventListener('submit', function (event) {
 });
 
 ```
-
+##project 3
+```javascript
+var timer = setInterval(function() {
+  const now = new Date()
+  const myTime = document.querySelector('#clock')
+  myTime.textContent = `${now.toLocaleTimeString()}`
+}, 100);
+```

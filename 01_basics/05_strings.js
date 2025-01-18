@@ -18,5 +18,5 @@ let neww = newName.slice(-5,3)
 console.log(neww)
 
 let enw = "          sgs r       "
-console.log(enw.trim())\
+console.log(enw.trim())
 // remove all unwanted spaces
