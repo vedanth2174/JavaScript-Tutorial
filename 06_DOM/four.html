@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4 - Edit and Remove DOM elements</title>
+</head>
+<body style = "background-color: #212121; color:aliceblue">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    const lang = ["Python","Rust","C++"]
+    // function addlanguage(langName){
+    //     const ul = document.querySelector('ul')
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // for (let i = 0; i < lang.length; i++) {
+    //     addlanguage(`${lang[i]}`)
+        
+    // }
+    //this is not the optimized method to add elements
+    function addOptimized(language1){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(language1))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    for (let i = 0; i < lang.length; i++) {
+        addOptimized(`${lang[i]}`)
+        
+    }
+
+    //Edit elements
+
+    const second_lang = document.querySelector("li:nth-child(2)")
+    // second_lang.innerHTML = "Hiii"
+    const newLi = document.createElement('li')
+    newLi.textContent = "Hiii"
+    second_lang.replaceWith(newLi)
+
+    const first_lang = document.querySelector("li:first-child")
+    first_lang.outerHTML = "<li>Typescript</li>"
+    const newL = document.createElement("li")
+    newL.textContent = "Swift"
+    first_lang.replaceWith(newL)
+
+    //remove elements
+
+    const last_lang = document.querySelector('li:last-child')
+    last_lang.remove()
+
+</script>
+</html>
