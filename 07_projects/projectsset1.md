@@ -151,3 +151,36 @@ function newGame() {
 }
 
 ```
+
+##project 6
+```javascript
+//Generate a random colour
+
+const random_color = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+random_color();
+let nul;
+const startChangingColor = function (a) {
+  let hiii = function () {
+    document.body.style.backgroundColor = random_color();
+  };
+  if (nul == null) {
+    nul = setInterval(hiii, 10);
+  }
+};
+
+const stopChangingColor = function () {
+  clearInterval(nul);
+  nul = null; //clear values after use
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+```
